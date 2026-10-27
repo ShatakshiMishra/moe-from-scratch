@@ -1,0 +1,769 @@
+
+$ /Users/mshatakshi/Working/ml-from-scratch/04-diffusion/.venv/bin/python train.py --config configs/dense.json --set name=dense --set seed=0 --set out_root=runs
+[dense_s0] router=dense device=mps params total=0.82M active/token=0.82M
+step   250 | train 2.595 | val 2.299 (ppl 9.96) | loadCV 0.00 prefCV 0.00 drop 0.000 unrouted 0.000 | 241.1k tok/s
+step   500 | train 2.070 | val 2.018 (ppl 7.52) | loadCV 0.00 prefCV 0.00 drop 0.000 unrouted 0.000 | 254.2k tok/s
+step   750 | train 1.776 | val 1.848 (ppl 6.35) | loadCV 0.00 prefCV 0.00 drop 0.000 unrouted 0.000 | 255.0k tok/s
+step  1000 | train 1.629 | val 1.755 (ppl 5.78) | loadCV 0.00 prefCV 0.00 drop 0.000 unrouted 0.000 | 254.1k tok/s
+step  1250 | train 1.543 | val 1.687 (ppl 5.40) | loadCV 0.00 prefCV 0.00 drop 0.000 unrouted 0.000 | 254.8k tok/s
+step  1500 | train 1.486 | val 1.659 (ppl 5.25) | loadCV 0.00 prefCV 0.00 drop 0.000 unrouted 0.000 | 254.2k tok/s
+step  1750 | train 1.439 | val 1.621 (ppl 5.06) | loadCV 0.00 prefCV 0.00 drop 0.000 unrouted 0.000 | 254.2k tok/s
+step  2000 | train 1.397 | val 1.599 (ppl 4.95) | loadCV 0.00 prefCV 0.00 drop 0.000 unrouted 0.000 | 254.3k tok/s
+step  2250 | train 1.365 | val 1.573 (ppl 4.82) | loadCV 0.00 prefCV 0.00 drop 0.000 unrouted 0.000 | 254.6k tok/s
+step  2500 | train 1.339 | val 1.557 (ppl 4.75) | loadCV 0.00 prefCV 0.00 drop 0.000 unrouted 0.000 | 253.6k tok/s
+step  2750 | train 1.319 | val 1.543 (ppl 4.68) | loadCV 0.00 prefCV 0.00 drop 0.000 unrouted 0.000 | 254.7k tok/s
+step  3000 | train 1.300 | val 1.547 (ppl 4.70) | loadCV 0.00 prefCV 0.00 drop 0.000 unrouted 0.000 | 254.9k tok/s
+final eval ...
+{
+  "run": "dense_s0",
+  "name": "dense",
+  "router": "dense",
+  "aux_coef": 0.0,
+  "capacity_factor": null,
+  "top_k": 2,
+  "params_total": 818048,
+  "params_active": 818048,
+  "final_val_loss": 1.5460180735588074,
+  "final_val_ppl": 4.692746757284412,
+  "teacher_forced_loss_causal_set": 1.4644689559936523,
+  "autoregressive_loss_causal_set": 1.4644689894424516,
+  "teacher_forced_ppl_causal_set": 4.325245734493138,
+  "autoregressive_ppl_causal_set": 4.325245879167417,
+  "train_tok_per_s": 254425.8135741005,
+  "infer_tok_per_s": 1506258.4745190039,
+  "max_abs_logit_change": 0.0,
+  "frac_positions_changed": 0.0
+}
+sample:
+
+Which shall me in this name her hears with the wooes,
+And, then the one name of thine in more
+Endure me throw with your counsel than thou stands
+As to put the fame for chastings, and they have see a lends she
+the pierce of the coral of the lies at ame,
+The arms and truly name of the wrongs pitch,
+Th
+
+$ /Users/mshatakshi/Working/ml-from-scratch/04-diffusion/.venv/bin/python train.py --config configs/dense.json --set name=dense --set seed=1 --set out_root=runs
+[dense_s1] router=dense device=mps params total=0.82M active/token=0.82M
+step   250 | train 2.590 | val 2.293 (ppl 9.91) | loadCV 0.00 prefCV 0.00 drop 0.000 unrouted 0.000 | 243.4k tok/s
+step   500 | train 2.080 | val 2.006 (ppl 7.43) | loadCV 0.00 prefCV 0.00 drop 0.000 unrouted 0.000 | 254.9k tok/s
+step   750 | train 1.789 | val 1.864 (ppl 6.45) | loadCV 0.00 prefCV 0.00 drop 0.000 unrouted 0.000 | 255.2k tok/s
+step  1000 | train 1.633 | val 1.766 (ppl 5.85) | loadCV 0.00 prefCV 0.00 drop 0.000 unrouted 0.000 | 253.5k tok/s
+step  1250 | train 1.543 | val 1.704 (ppl 5.50) | loadCV 0.00 prefCV 0.00 drop 0.000 unrouted 0.000 | 253.7k tok/s
+step  1500 | train 1.485 | val 1.654 (ppl 5.23) | loadCV 0.00 prefCV 0.00 drop 0.000 unrouted 0.000 | 254.9k tok/s
+step  1750 | train 1.439 | val 1.620 (ppl 5.05) | loadCV 0.00 prefCV 0.00 drop 0.000 unrouted 0.000 | 253.8k tok/s
+step  2000 | train 1.402 | val 1.597 (ppl 4.94) | loadCV 0.00 prefCV 0.00 drop 0.000 unrouted 0.000 | 253.6k tok/s
+step  2250 | train 1.365 | val 1.573 (ppl 4.82) | loadCV 0.00 prefCV 0.00 drop 0.000 unrouted 0.000 | 253.5k tok/s
+step  2500 | train 1.338 | val 1.561 (ppl 4.77) | loadCV 0.00 prefCV 0.00 drop 0.000 unrouted 0.000 | 253.9k tok/s
+step  2750 | train 1.316 | val 1.544 (ppl 4.69) | loadCV 0.00 prefCV 0.00 drop 0.000 unrouted 0.000 | 254.2k tok/s
+step  3000 | train 1.304 | val 1.541 (ppl 4.67) | loadCV 0.00 prefCV 0.00 drop 0.000 unrouted 0.000 | 254.2k tok/s
+final eval ...
+{
+  "run": "dense_s1",
+  "name": "dense",
+  "router": "dense",
+  "aux_coef": 0.0,
+  "capacity_factor": null,
+  "top_k": 2,
+  "params_total": 818048,
+  "params_active": 818048,
+  "final_val_loss": 1.5460412430763244,
+  "final_val_ppl": 4.6928554872222135,
+  "teacher_forced_loss_causal_set": 1.4782285690307617,
+  "autoregressive_loss_causal_set": 1.478228596864625,
+  "teacher_forced_ppl_causal_set": 4.385170769286138,
+  "autoregressive_ppl_causal_set": 4.3851708913423835,
+  "train_tok_per_s": 254126.4196326779,
+  "infer_tok_per_s": 1547275.762427857,
+  "max_abs_logit_change": 0.0,
+  "frac_positions_changed": 0.0
+}
+sample:
+
+Well, shall yet be him as in this grief bable,
+Thoughts thou enemy love, and tiding tell.
+
+MENENIUS:
+An it be with your counsel through the respected
+Of less that we would passign of the king.
+
+ANGELO:
+I am not to deserve me bloody your shore.
+
+ANGELO:
+Has it so, a king in a true templains,
+And will
+
+$ /Users/mshatakshi/Working/ml-from-scratch/04-diffusion/.venv/bin/python train.py --config configs/topk_softmax.json --set name=topk_softmax --set seed=0 --set out_root=runs
+[topk_softmax_s0] router=topk device=mps params total=2.40M active/token=0.82M
+step   250 | train 2.583 | val 2.301 (ppl 9.99) | loadCV 0.78 prefCV 0.78 drop 0.000 unrouted 0.000 | 79.1k tok/s
+step   500 | train 2.056 | val 1.995 (ppl 7.35) | loadCV 0.78 prefCV 0.78 drop 0.000 unrouted 0.000 | 84.0k tok/s
+step   750 | train 1.763 | val 1.843 (ppl 6.31) | loadCV 0.77 prefCV 0.77 drop 0.000 unrouted 0.000 | 83.5k tok/s
+step  1000 | train 1.608 | val 1.742 (ppl 5.71) | loadCV 0.76 prefCV 0.76 drop 0.000 unrouted 0.000 | 82.8k tok/s
+step  1250 | train 1.512 | val 1.666 (ppl 5.29) | loadCV 0.76 prefCV 0.76 drop 0.000 unrouted 0.000 | 84.9k tok/s
+step  1500 | train 1.445 | val 1.627 (ppl 5.09) | loadCV 0.76 prefCV 0.76 drop 0.000 unrouted 0.000 | 86.0k tok/s
+step  1750 | train 1.388 | val 1.597 (ppl 4.94) | loadCV 0.77 prefCV 0.77 drop 0.000 unrouted 0.000 | 88.7k tok/s
+step  2000 | train 1.348 | val 1.574 (ppl 4.82) | loadCV 0.76 prefCV 0.76 drop 0.000 unrouted 0.000 | 89.1k tok/s
+step  2250 | train 1.304 | val 1.554 (ppl 4.73) | loadCV 0.76 prefCV 0.76 drop 0.000 unrouted 0.000 | 88.7k tok/s
+step  2500 | train 1.278 | val 1.538 (ppl 4.65) | loadCV 0.75 prefCV 0.75 drop 0.000 unrouted 0.000 | 88.1k tok/s
+step  2750 | train 1.254 | val 1.533 (ppl 4.63) | loadCV 0.75 prefCV 0.75 drop 0.000 unrouted 0.000 | 87.9k tok/s
+step  3000 | train 1.234 | val 1.534 (ppl 4.64) | loadCV 0.74 prefCV 0.74 drop 0.000 unrouted 0.000 | 85.4k tok/s
+final eval ...
+{
+  "run": "topk_softmax_s0",
+  "name": "topk_softmax",
+  "router": "topk",
+  "aux_coef": 0.0,
+  "capacity_factor": null,
+  "top_k": 2,
+  "params_total": 2404736,
+  "params_active": 822656,
+  "final_val_loss": 1.539696136713028,
+  "final_val_ppl": 4.663173088581762,
+  "teacher_forced_loss_causal_set": 1.4725544452667236,
+  "autoregressive_loss_causal_set": 1.47255436967464,
+  "teacher_forced_ppl_causal_set": 4.360359226066942,
+  "autoregressive_ppl_causal_set": 4.360358896458315,
+  "train_tok_per_s": 86271.89736567925,
+  "infer_tok_per_s": 143490.55240402897,
+  "max_abs_logit_change": 0.0,
+  "frac_positions_changed": 0.0
+}
+sample:
+
+Well because king; his name her hears
+My were borne unditent my father, nor any life,
+in the earth of sentence of the rock,
+Where now the people that in less if me for
+conspiration of proud wretch and such an innocent
+Whose seat daterness of that blood and arms
+Her true in a trumpherlant since fair
+
+
+$ /Users/mshatakshi/Working/ml-from-scratch/04-diffusion/.venv/bin/python train.py --config configs/topk_softmax.json --set name=topk_softmax --set seed=1 --set out_root=runs
+[topk_softmax_s1] router=topk device=mps params total=2.40M active/token=0.82M
+step   250 | train 2.586 | val 2.294 (ppl 9.91) | loadCV 0.75 prefCV 0.75 drop 0.000 unrouted 0.000 | 62.8k tok/s
+step   500 | train 2.036 | val 1.970 (ppl 7.17) | loadCV 0.87 prefCV 0.87 drop 0.000 unrouted 0.000 | 86.0k tok/s
+step   750 | train 1.742 | val 1.825 (ppl 6.20) | loadCV 0.84 prefCV 0.84 drop 0.000 unrouted 0.000 | 87.2k tok/s
+step  1000 | train 1.594 | val 1.725 (ppl 5.61) | loadCV 0.85 prefCV 0.85 drop 0.000 unrouted 0.000 | 85.4k tok/s
+step  1250 | train 1.504 | val 1.671 (ppl 5.32) | loadCV 0.84 prefCV 0.84 drop 0.000 unrouted 0.000 | 86.8k tok/s
+step  1500 | train 1.437 | val 1.620 (ppl 5.05) | loadCV 0.84 prefCV 0.84 drop 0.000 unrouted 0.000 | 87.5k tok/s
+step  1750 | train 1.385 | val 1.588 (ppl 4.90) | loadCV 0.83 prefCV 0.83 drop 0.000 unrouted 0.000 | 88.5k tok/s
+step  2000 | train 1.330 | val 1.566 (ppl 4.79) | loadCV 0.82 prefCV 0.82 drop 0.000 unrouted 0.000 | 88.3k tok/s
+step  2250 | train 1.296 | val 1.540 (ppl 4.66) | loadCV 0.82 prefCV 0.82 drop 0.000 unrouted 0.000 | 88.7k tok/s
+step  2500 | train 1.269 | val 1.529 (ppl 4.61) | loadCV 0.82 prefCV 0.82 drop 0.000 unrouted 0.000 | 87.9k tok/s
+step  2750 | train 1.241 | val 1.524 (ppl 4.59) | loadCV 0.81 prefCV 0.81 drop 0.000 unrouted 0.000 | 88.7k tok/s
+step  3000 | train 1.222 | val 1.527 (ppl 4.60) | loadCV 0.81 prefCV 0.81 drop 0.000 unrouted 0.000 | 88.6k tok/s
+final eval ...
+{
+  "run": "topk_softmax_s1",
+  "name": "topk_softmax",
+  "router": "topk",
+  "aux_coef": 0.0,
+  "capacity_factor": null,
+  "top_k": 2,
+  "params_total": 2404736,
+  "params_active": 822656,
+  "final_val_loss": 1.5286714661121368,
+  "final_val_ppl": 4.612045491633313,
+  "teacher_forced_loss_causal_set": 1.4421794414520264,
+  "autoregressive_loss_causal_set": 1.4421793269622185,
+  "teacher_forced_ppl_causal_set": 4.22990460778157,
+  "autoregressive_ppl_causal_set": 4.229904123500632,
+  "train_tok_per_s": 87596.11124759192,
+  "infer_tok_per_s": 264342.91006275546,
+  "max_abs_logit_change": 0.0,
+  "frac_positions_changed": 0.0
+}
+sample:
+
+Were it wilt king so and punish him.
+
+MENENIUS:
+How now! O God's present saintle die,
+For the English sentence of the rock, his throrow,
+for Clarence, I leagh it for to Juliet?
+
+DUKE VINCENTIO:
+A kneed forget that is unsol; and my lord,
+Thou deserve many wounds and the place of me?
+
+LUCIO:
+Either br
+
+$ /Users/mshatakshi/Working/ml-from-scratch/04-diffusion/.venv/bin/python train.py --config configs/topk_softmax_cap.json --set name=topk_softmax_cap --set seed=0 --set out_root=runs
+[topk_softmax_cap_s0] router=topk device=mps params total=2.40M active/token=0.82M
+step   250 | train 2.591 | val 2.288 (ppl 9.86) | loadCV 0.44 prefCV 0.68 drop 0.222 unrouted 0.053 | 118.8k tok/s
+step   500 | train 2.020 | val 1.971 (ppl 7.18) | loadCV 0.46 prefCV 0.70 drop 0.196 unrouted 0.041 | 121.8k tok/s
+step   750 | train 1.738 | val 1.816 (ppl 6.14) | loadCV 0.45 prefCV 0.69 drop 0.192 unrouted 0.044 | 121.7k tok/s
+step  1000 | train 1.600 | val 1.728 (ppl 5.63) | loadCV 0.44 prefCV 0.68 drop 0.186 unrouted 0.036 | 121.6k tok/s
+step  1250 | train 1.514 | val 1.683 (ppl 5.38) | loadCV 0.45 prefCV 0.68 drop 0.182 unrouted 0.029 | 121.7k tok/s
+step  1500 | train 1.450 | val 1.627 (ppl 5.09) | loadCV 0.44 prefCV 0.68 drop 0.177 unrouted 0.022 | 121.6k tok/s
+step  1750 | train 1.396 | val 1.598 (ppl 4.94) | loadCV 0.44 prefCV 0.68 drop 0.172 unrouted 0.017 | 121.6k tok/s
+step  2000 | train 1.356 | val 1.581 (ppl 4.86) | loadCV 0.44 prefCV 0.67 drop 0.166 unrouted 0.010 | 121.3k tok/s
+step  2250 | train 1.314 | val 1.550 (ppl 4.71) | loadCV 0.44 prefCV 0.67 drop 0.161 unrouted 0.007 | 121.4k tok/s
+step  2500 | train 1.287 | val 1.535 (ppl 4.64) | loadCV 0.44 prefCV 0.66 drop 0.160 unrouted 0.006 | 121.8k tok/s
+step  2750 | train 1.262 | val 1.535 (ppl 4.64) | loadCV 0.43 prefCV 0.66 drop 0.158 unrouted 0.005 | 121.6k tok/s
+step  3000 | train 1.242 | val 1.535 (ppl 4.64) | loadCV 0.43 prefCV 0.66 drop 0.157 unrouted 0.005 | 121.8k tok/s
+final eval ...
+{
+  "run": "topk_softmax_cap_s0",
+  "name": "topk_softmax_cap",
+  "router": "topk",
+  "aux_coef": 0.0,
+  "capacity_factor": 1.25,
+  "top_k": 2,
+  "params_total": 2404736,
+  "params_active": 822656,
+  "final_val_loss": 1.5397402107715608,
+  "final_val_ppl": 4.663378618074643,
+  "teacher_forced_loss_causal_set": 1.4778926372528076,
+  "autoregressive_loss_causal_set": 1.5090080505571706,
+  "teacher_forced_ppl_causal_set": 4.383697898478886,
+  "autoregressive_ppl_causal_set": 4.52224273255818,
+  "train_tok_per_s": 121620.08503788475,
+  "infer_tok_per_s": 350759.1960588919,
+  "max_abs_logit_change": 17.862548828125,
+  "frac_positions_changed": 0.953125
+}
+sample:
+
+Well, shame her people, justice and steel thee,
+But undiving enemy'd him an any granted:
+So we will please you attered you, hourts kill to
+The matter-hateful presence on the natick'd time
+And man know you shalt not she so conding all.
+
+RUTLAUDINA:
+Well, come Pompey, my placim compass
+The sipple are 
+
+$ /Users/mshatakshi/Working/ml-from-scratch/04-diffusion/.venv/bin/python train.py --config configs/topk_softmax_cap.json --set name=topk_softmax_cap --set seed=1 --set out_root=runs
+[topk_softmax_cap_s1] router=topk device=mps params total=2.40M active/token=0.82M
+step   250 | train 2.595 | val 2.290 (ppl 9.88) | loadCV 0.55 prefCV 0.85 drop 0.284 unrouted 0.091 | 118.3k tok/s
+step   500 | train 2.014 | val 1.954 (ppl 7.06) | loadCV 0.75 prefCV 0.99 drop 0.330 unrouted 0.139 | 121.7k tok/s
+step   750 | train 1.741 | val 1.848 (ppl 6.35) | loadCV 0.81 prefCV 1.01 drop 0.337 unrouted 0.142 | 121.6k tok/s
+step  1000 | train 1.612 | val 1.753 (ppl 5.77) | loadCV 0.80 prefCV 1.00 drop 0.333 unrouted 0.134 | 121.3k tok/s
+step  1250 | train 1.528 | val 1.708 (ppl 5.52) | loadCV 0.80 prefCV 1.00 drop 0.330 unrouted 0.126 | 120.2k tok/s
+step  1500 | train 1.467 | val 1.648 (ppl 5.20) | loadCV 0.80 prefCV 0.99 drop 0.328 unrouted 0.131 | 93.1k tok/s
+step  1750 | train 1.419 | val 1.612 (ppl 5.01) | loadCV 0.80 prefCV 0.99 drop 0.324 unrouted 0.120 | 81.7k tok/s
+step  2000 | train 1.365 | val 1.585 (ppl 4.88) | loadCV 0.79 prefCV 0.98 drop 0.318 unrouted 0.111 | 83.1k tok/s
+step  2250 | train 1.333 | val 1.564 (ppl 4.78) | loadCV 0.79 prefCV 0.97 drop 0.315 unrouted 0.109 | 85.2k tok/s
+step  2500 | train 1.308 | val 1.549 (ppl 4.71) | loadCV 0.78 prefCV 0.97 drop 0.312 unrouted 0.106 | 85.4k tok/s
+step  2750 | train 1.282 | val 1.544 (ppl 4.68) | loadCV 0.78 prefCV 0.96 drop 0.309 unrouted 0.105 | 85.1k tok/s
+step  3000 | train 1.263 | val 1.541 (ppl 4.67) | loadCV 0.77 prefCV 0.95 drop 0.305 unrouted 0.103 | 83.7k tok/s
+final eval ...
+{
+  "run": "topk_softmax_cap_s1",
+  "name": "topk_softmax_cap",
+  "router": "topk",
+  "aux_coef": 0.0,
+  "capacity_factor": 1.25,
+  "top_k": 2,
+  "params_total": 2404736,
+  "params_active": 822656,
+  "final_val_loss": 1.5434748125076294,
+  "final_val_ppl": 4.6808270411333845,
+  "teacher_forced_loss_causal_set": 1.4890929460525513,
+  "autoregressive_loss_causal_set": 1.5314446315497605,
+  "teacher_forced_ppl_causal_set": 4.433072658749398,
+  "autoregressive_ppl_causal_set": 4.624853207536911,
+  "train_tok_per_s": 98376.72274943325,
+  "infer_tok_per_s": 232221.65164344333,
+  "max_abs_logit_change": 11.667521476745605,
+  "frac_positions_changed": 0.95703125
+}
+sample:
+
+Which shall mel peehhhlrrreehhllllls thhhhlllllow it.
+
+Nurrineman:
+And on forrielll thhhhhs fairlll of my sorrs,
+At I am bllh mand worr thhan allls, chhaleeeeeeeout
+Thou thoughts,t thwilk ourrrrrf a llld again;.
+But heeeon; forrrrilll,,; hhhheeeeeeeeeeeeeeeeees,,!
+Thrrrpllling! cousin,,, sirrthout b
+
+$ /Users/mshatakshi/Working/ml-from-scratch/04-diffusion/.venv/bin/python train.py --config configs/topk_aux.json --set name=topk_aux --set seed=0 --set out_root=runs
+[topk_aux_s0] router=topk device=mps params total=2.40M active/token=0.82M
+step   250 | train 2.585 | val 2.287 (ppl 9.84) | loadCV 0.07 prefCV 0.08 drop 0.031 unrouted 0.002 | 83.7k tok/s
+step   500 | train 2.042 | val 1.978 (ppl 7.23) | loadCV 0.08 prefCV 0.08 drop 0.003 unrouted 0.000 | 85.3k tok/s
+step   750 | train 1.736 | val 1.820 (ppl 6.17) | loadCV 0.08 prefCV 0.08 drop 0.001 unrouted 0.000 | 85.5k tok/s
+step  1000 | train 1.587 | val 1.730 (ppl 5.64) | loadCV 0.07 prefCV 0.07 drop 0.001 unrouted 0.000 | 84.2k tok/s
+step  1250 | train 1.493 | val 1.660 (ppl 5.26) | loadCV 0.07 prefCV 0.08 drop 0.001 unrouted 0.000 | 79.0k tok/s
+step  1500 | train 1.426 | val 1.610 (ppl 5.00) | loadCV 0.07 prefCV 0.07 drop 0.001 unrouted 0.000 | 80.5k tok/s
+step  1750 | train 1.369 | val 1.578 (ppl 4.85) | loadCV 0.07 prefCV 0.07 drop 0.001 unrouted 0.000 | 82.4k tok/s
+step  2000 | train 1.328 | val 1.561 (ppl 4.76) | loadCV 0.07 prefCV 0.07 drop 0.001 unrouted 0.000 | 82.5k tok/s
+step  2250 | train 1.284 | val 1.539 (ppl 4.66) | loadCV 0.07 prefCV 0.07 drop 0.001 unrouted 0.000 | 81.0k tok/s
+step  2500 | train 1.257 | val 1.522 (ppl 4.58) | loadCV 0.06 prefCV 0.06 drop 0.000 unrouted 0.000 | 79.0k tok/s
+step  2750 | train 1.232 | val 1.518 (ppl 4.56) | loadCV 0.06 prefCV 0.06 drop 0.000 unrouted 0.000 | 81.0k tok/s
+step  3000 | train 1.213 | val 1.514 (ppl 4.54) | loadCV 0.06 prefCV 0.06 drop 0.000 unrouted 0.000 | 80.2k tok/s
+final eval ...
+{
+  "run": "topk_aux_s0",
+  "name": "topk_aux",
+  "router": "topk",
+  "aux_coef": 0.01,
+  "capacity_factor": 1.25,
+  "top_k": 2,
+  "params_total": 2404736,
+  "params_active": 822656,
+  "final_val_loss": 1.5184207737445832,
+  "final_val_ppl": 4.565010315531434,
+  "teacher_forced_loss_causal_set": 1.4521557092666626,
+  "autoregressive_loss_causal_set": 1.522852992908966,
+  "teacher_forced_ppl_causal_set": 4.272314463277963,
+  "autoregressive_ppl_causal_set": 4.585288346881035,
+  "train_tok_per_s": 81888.7930380799,
+  "infer_tok_per_s": 277397.02658147545,
+  "max_abs_logit_change": 13.186256408691406,
+  "frac_positions_changed": 0.962890625
+}
+sample:
+
+Which shall meet the anothing in this labour
+Whom ever invious and love, an any armour
+And bear him one that is the house of thee
+Of grates and state-hearted in me for charge
+For the truth of my father'd against this us.
+God day day the shore that the truth of my vice,
+His imaginate wrongs in confer
+
+$ /Users/mshatakshi/Working/ml-from-scratch/04-diffusion/.venv/bin/python train.py --config configs/topk_aux.json --set name=topk_aux --set seed=1 --set out_root=runs
+[topk_aux_s1] router=topk device=mps params total=2.40M active/token=0.82M
+step   250 | train 2.590 | val 2.301 (ppl 9.98) | loadCV 0.09 prefCV 0.10 drop 0.037 unrouted 0.003 | 73.8k tok/s
+step   500 | train 2.049 | val 1.961 (ppl 7.11) | loadCV 0.10 prefCV 0.11 drop 0.005 unrouted 0.000 | 78.1k tok/s
+step   750 | train 1.744 | val 1.832 (ppl 6.25) | loadCV 0.09 prefCV 0.09 drop 0.002 unrouted 0.000 | 77.1k tok/s
+step  1000 | train 1.591 | val 1.724 (ppl 5.61) | loadCV 0.08 prefCV 0.08 drop 0.001 unrouted 0.000 | 74.6k tok/s
+step  1250 | train 1.497 | val 1.659 (ppl 5.25) | loadCV 0.08 prefCV 0.08 drop 0.001 unrouted 0.000 | 75.9k tok/s
+step  1500 | train 1.428 | val 1.622 (ppl 5.06) | loadCV 0.09 prefCV 0.09 drop 0.000 unrouted 0.000 | 76.1k tok/s
+step  1750 | train 1.377 | val 1.590 (ppl 4.90) | loadCV 0.08 prefCV 0.08 drop 0.000 unrouted 0.000 | 76.3k tok/s
+step  2000 | train 1.322 | val 1.563 (ppl 4.78) | loadCV 0.09 prefCV 0.09 drop 0.000 unrouted 0.000 | 76.8k tok/s
+step  2250 | train 1.288 | val 1.544 (ppl 4.68) | loadCV 0.08 prefCV 0.08 drop 0.000 unrouted 0.000 | 76.4k tok/s
+step  2500 | train 1.260 | val 1.534 (ppl 4.64) | loadCV 0.07 prefCV 0.07 drop 0.000 unrouted 0.000 | 76.8k tok/s
+step  2750 | train 1.232 | val 1.525 (ppl 4.59) | loadCV 0.07 prefCV 0.07 drop 0.000 unrouted 0.000 | 118.9k tok/s
+step  3000 | train 1.212 | val 1.526 (ppl 4.60) | loadCV 0.07 prefCV 0.07 drop 0.000 unrouted 0.000 | 85.4k tok/s
+final eval ...
+{
+  "run": "topk_aux_s1",
+  "name": "topk_aux",
+  "router": "topk",
+  "aux_coef": 0.01,
+  "capacity_factor": 1.25,
+  "top_k": 2,
+  "params_total": 2404736,
+  "params_active": 822656,
+  "final_val_loss": 1.5280160045623778,
+  "final_val_ppl": 4.6090234636675715,
+  "teacher_forced_loss_causal_set": 1.4439959526062012,
+  "autoregressive_loss_causal_set": 1.5062939767863384,
+  "teacher_forced_ppl_causal_set": 4.237595259645403,
+  "autoregressive_ppl_causal_set": 4.509985672978355,
+  "train_tok_per_s": 81122.843979854,
+  "infer_tok_per_s": 217177.53577208892,
+  "max_abs_logit_change": 4.944883823394775,
+  "frac_positions_changed": 0.951171875
+}
+sample:
+
+Which should kill share thhis is custom battle,
+And will bring to the noble good winter: why
+To do come to be with your counsel than guards
+A parter of the heart offend John'd?
+
+DUKE OF AUMERLE:
+A man, foot hot told him which love they behold
+That the truth he made the place of mine orders,
+And fres
+
+$ /Users/mshatakshi/Working/ml-from-scratch/04-diffusion/.venv/bin/python train.py --config configs/topk_aux_nocap.json --set name=topk_aux_nocap --set seed=0 --set out_root=runs
+[topk_aux_nocap_s0] router=topk device=mps params total=2.40M active/token=0.82M
+step   250 | train 2.579 | val 2.288 (ppl 9.86) | loadCV 0.08 prefCV 0.08 drop 0.000 unrouted 0.000 | 62.2k tok/s
+step   500 | train 2.051 | val 1.991 (ppl 7.32) | loadCV 0.08 prefCV 0.08 drop 0.000 unrouted 0.000 | 69.6k tok/s
+step   750 | train 1.747 | val 1.808 (ppl 6.10) | loadCV 0.09 prefCV 0.09 drop 0.000 unrouted 0.000 | 70.8k tok/s
+step  1000 | train 1.590 | val 1.721 (ppl 5.59) | loadCV 0.08 prefCV 0.08 drop 0.000 unrouted 0.000 | 71.9k tok/s
+step  1250 | train 1.495 | val 1.662 (ppl 5.27) | loadCV 0.08 prefCV 0.08 drop 0.000 unrouted 0.000 | 73.0k tok/s
+step  1500 | train 1.430 | val 1.617 (ppl 5.04) | loadCV 0.08 prefCV 0.08 drop 0.000 unrouted 0.000 | 74.5k tok/s
+step  1750 | train 1.375 | val 1.580 (ppl 4.86) | loadCV 0.08 prefCV 0.08 drop 0.000 unrouted 0.000 | 73.3k tok/s
+step  2000 | train 1.334 | val 1.554 (ppl 4.73) | loadCV 0.07 prefCV 0.07 drop 0.000 unrouted 0.000 | 78.1k tok/s
+step  2250 | train 1.291 | val 1.540 (ppl 4.67) | loadCV 0.06 prefCV 0.06 drop 0.000 unrouted 0.000 | 74.3k tok/s
+step  2500 | train 1.264 | val 1.528 (ppl 4.61) | loadCV 0.06 prefCV 0.06 drop 0.000 unrouted 0.000 | 80.0k tok/s
+step  2750 | train 1.240 | val 1.523 (ppl 4.59) | loadCV 0.06 prefCV 0.06 drop 0.000 unrouted 0.000 | 74.7k tok/s
+step  3000 | train 1.221 | val 1.524 (ppl 4.59) | loadCV 0.06 prefCV 0.06 drop 0.000 unrouted 0.000 | 85.7k tok/s
+final eval ...
+{
+  "run": "topk_aux_nocap_s0",
+  "name": "topk_aux_nocap",
+  "router": "topk",
+  "aux_coef": 0.01,
+  "capacity_factor": null,
+  "top_k": 2,
+  "params_total": 2404736,
+  "params_active": 822656,
+  "final_val_loss": 1.5294078075885773,
+  "final_val_ppl": 4.615442782649674,
+  "teacher_forced_loss_causal_set": 1.4988722801208496,
+  "autoregressive_loss_causal_set": 1.4988723425003059,
+  "teacher_forced_ppl_causal_set": 4.4766378292091185,
+  "autoregressive_ppl_causal_set": 4.476638108459361,
+  "train_tok_per_s": 75083.35230954987,
+  "infer_tok_per_s": 229192.42493483354,
+  "max_abs_logit_change": 0.0,
+  "frac_positions_changed": 0.0
+}
+sample:
+
+Well, what they have any punish'd to the well,
+Thou wilt bring the love, and the dined make
+Before thee nor that terror.
+
+FRIAR LAURENCE:
+It Camillo change he is soft on their true?
+
+GLOUCESTER:
+A man of all times is us once but danger
+That in a toverable of my heaven,
+His agedic he wrongs in confes
+
+$ /Users/mshatakshi/Working/ml-from-scratch/04-diffusion/.venv/bin/python train.py --config configs/topk_aux_nocap.json --set name=topk_aux_nocap --set seed=1 --set out_root=runs
+[topk_aux_nocap_s1] router=topk device=mps params total=2.40M active/token=0.82M
+step   250 | train 2.586 | val 2.297 (ppl 9.94) | loadCV 0.10 prefCV 0.10 drop 0.000 unrouted 0.000 | 89.0k tok/s
+step   500 | train 2.053 | val 1.978 (ppl 7.23) | loadCV 0.10 prefCV 0.10 drop 0.000 unrouted 0.000 | 105.2k tok/s
+step   750 | train 1.745 | val 1.835 (ppl 6.26) | loadCV 0.08 prefCV 0.08 drop 0.000 unrouted 0.000 | 106.5k tok/s
+step  1000 | train 1.592 | val 1.727 (ppl 5.62) | loadCV 0.09 prefCV 0.09 drop 0.000 unrouted 0.000 | 78.7k tok/s
+step  1250 | train 1.497 | val 1.667 (ppl 5.30) | loadCV 0.08 prefCV 0.08 drop 0.000 unrouted 0.000 | 76.6k tok/s
+step  1500 | train 1.428 | val 1.615 (ppl 5.03) | loadCV 0.08 prefCV 0.08 drop 0.000 unrouted 0.000 | 74.0k tok/s
+step  1750 | train 1.375 | val 1.586 (ppl 4.88) | loadCV 0.07 prefCV 0.07 drop 0.000 unrouted 0.000 | 72.7k tok/s
+step  2000 | train 1.319 | val 1.564 (ppl 4.78) | loadCV 0.07 prefCV 0.07 drop 0.000 unrouted 0.000 | 74.6k tok/s
+step  2250 | train 1.283 | val 1.541 (ppl 4.67) | loadCV 0.07 prefCV 0.07 drop 0.000 unrouted 0.000 | 74.7k tok/s
+step  2500 | train 1.256 | val 1.532 (ppl 4.63) | loadCV 0.07 prefCV 0.07 drop 0.000 unrouted 0.000 | 73.2k tok/s
+step  2750 | train 1.227 | val 1.529 (ppl 4.61) | loadCV 0.07 prefCV 0.07 drop 0.000 unrouted 0.000 | 73.3k tok/s
+step  3000 | train 1.207 | val 1.526 (ppl 4.60) | loadCV 0.07 prefCV 0.07 drop 0.000 unrouted 0.000 | 75.0k tok/s
+final eval ...
+{
+  "run": "topk_aux_nocap_s1",
+  "name": "topk_aux_nocap",
+  "router": "topk",
+  "aux_coef": 0.01,
+  "capacity_factor": null,
+  "top_k": 2,
+  "params_total": 2404736,
+  "params_active": 822656,
+  "final_val_loss": 1.5306132423877716,
+  "final_val_ppl": 4.6210097526291385,
+  "teacher_forced_loss_causal_set": 1.4525409936904907,
+  "autoregressive_loss_causal_set": 1.4525409397608442,
+  "teacher_forced_ppl_causal_set": 4.273960836634999,
+  "autoregressive_ppl_causal_set": 4.2739606061418085,
+  "train_tok_per_s": 80401.81435082319,
+  "infer_tok_per_s": 215927.55672709335,
+  "max_abs_logit_change": 0.0,
+  "frac_positions_changed": 0.0
+}
+sample:
+
+We from the mercy shall join this time for this:
+O her is hate, and bend after did not wash
+Which now sent a sweeter than the eat
+Of graves a past thou then, I am part
+My father, and they have see melt forget
+From me undone self-dat the shores and their counted
+Will bring the ground of her pilcrees
+
+
+$ /Users/mshatakshi/Working/ml-from-scratch/04-diffusion/.venv/bin/python train.py --config configs/expert_choice.json --set name=expert_choice --set seed=0 --set out_root=runs
+[expert_choice_s0] router=expert_choice device=mps params total=2.40M active/token=0.82M
+step   250 | train 2.606 | val 2.308 (ppl 10.05) | loadCV 0.00 prefCV 0.43 drop 0.000 unrouted 0.010 | 77.3k tok/s
+step   500 | train 2.041 | val 1.984 (ppl 7.28) | loadCV 0.00 prefCV 0.37 drop 0.000 unrouted 0.003 | 77.9k tok/s
+step   750 | train 1.735 | val 1.809 (ppl 6.10) | loadCV 0.00 prefCV 0.30 drop 0.000 unrouted 0.005 | 81.5k tok/s
+step  1000 | train 1.583 | val 1.721 (ppl 5.59) | loadCV 0.00 prefCV 0.40 drop 0.000 unrouted 0.005 | 81.6k tok/s
+step  1250 | train 1.493 | val 1.659 (ppl 5.25) | loadCV 0.00 prefCV 0.40 drop 0.000 unrouted 0.005 | 81.6k tok/s
+step  1500 | train 1.425 | val 1.604 (ppl 4.97) | loadCV 0.00 prefCV 0.41 drop 0.000 unrouted 0.005 | 80.7k tok/s
+step  1750 | train 1.369 | val 1.577 (ppl 4.84) | loadCV 0.00 prefCV 0.38 drop 0.000 unrouted 0.004 | 80.5k tok/s
+step  2000 | train 1.329 | val 1.548 (ppl 4.70) | loadCV 0.00 prefCV 0.37 drop 0.000 unrouted 0.004 | 82.8k tok/s
+step  2250 | train 1.285 | val 1.533 (ppl 4.63) | loadCV 0.00 prefCV 0.35 drop 0.000 unrouted 0.004 | 72.5k tok/s
+step  2500 | train 1.257 | val 1.518 (ppl 4.56) | loadCV 0.00 prefCV 0.33 drop 0.000 unrouted 0.003 | 61.0k tok/s
+step  2750 | train 1.232 | val 1.515 (ppl 4.55) | loadCV 0.00 prefCV 0.32 drop 0.000 unrouted 0.003 | 85.3k tok/s
+step  3000 | train 1.213 | val 1.511 (ppl 4.53) | loadCV 0.00 prefCV 0.30 drop 0.000 unrouted 0.002 | 85.8k tok/s
+final eval ...
+{
+  "run": "expert_choice_s0",
+  "name": "expert_choice",
+  "router": "expert_choice",
+  "aux_coef": 0.0,
+  "capacity_factor": 1.0,
+  "top_k": 2,
+  "params_total": 2404736,
+  "params_active": 822656,
+  "final_val_loss": 1.5134702837467193,
+  "final_val_ppl": 4.542467123586845,
+  "teacher_forced_loss_causal_set": 1.452467918395996,
+  "autoregressive_loss_causal_set": 1.4939766697545735,
+  "teacher_forced_ppl_causal_set": 4.2736485270993985,
+  "autoregressive_ppl_causal_set": 4.454775513001802,
+  "train_tok_per_s": 79197.35226279878,
+  "infer_tok_per_s": 266624.86245715717,
+  "max_abs_logit_change": 12.359594345092773,
+  "frac_positions_changed": 1.0
+}
+sample:
+
+Were ied it measure to things it curse to be
+Whom ever invy true queen on fortune come,
+Is confidence a never with your counsel the count
+Than you thou wilt, I can for charge your grace;
+But see for less as he farewell so condit
+Attend the like of their countesyance.
+Could it be gone: I would to kno
+
+$ /Users/mshatakshi/Working/ml-from-scratch/04-diffusion/.venv/bin/python train.py --config configs/expert_choice.json --set name=expert_choice --set seed=1 --set out_root=runs
+[expert_choice_s1] router=expert_choice device=mps params total=2.40M active/token=0.82M
+step   250 | train 2.603 | val 2.279 (ppl 9.77) | loadCV 0.00 prefCV 0.49 drop 0.000 unrouted 0.011 | 84.4k tok/s
+step   500 | train 2.002 | val 1.927 (ppl 6.87) | loadCV 0.00 prefCV 0.54 drop 0.000 unrouted 0.004 | 84.1k tok/s
+step   750 | train 1.713 | val 1.816 (ppl 6.15) | loadCV 0.00 prefCV 0.42 drop 0.000 unrouted 0.005 | 84.8k tok/s
+step  1000 | train 1.576 | val 1.727 (ppl 5.62) | loadCV 0.00 prefCV 0.36 drop 0.000 unrouted 0.003 | 84.4k tok/s
+step  1250 | train 1.489 | val 1.658 (ppl 5.25) | loadCV 0.00 prefCV 0.30 drop 0.000 unrouted 0.002 | 87.3k tok/s
+step  1500 | train 1.423 | val 1.609 (ppl 5.00) | loadCV 0.00 prefCV 0.31 drop 0.000 unrouted 0.001 | 88.0k tok/s
+step  1750 | train 1.371 | val 1.576 (ppl 4.83) | loadCV 0.00 prefCV 0.30 drop 0.000 unrouted 0.001 | 88.0k tok/s
+step  2000 | train 1.317 | val 1.555 (ppl 4.73) | loadCV 0.00 prefCV 0.29 drop 0.000 unrouted 0.001 | 87.6k tok/s
+step  2250 | train 1.282 | val 1.547 (ppl 4.70) | loadCV 0.00 prefCV 0.30 drop 0.000 unrouted 0.000 | 114.0k tok/s
+step  2500 | train 1.254 | val 1.531 (ppl 4.62) | loadCV 0.00 prefCV 0.30 drop 0.000 unrouted 0.000 | 116.3k tok/s
+step  2750 | train 1.225 | val 1.526 (ppl 4.60) | loadCV 0.00 prefCV 0.28 drop 0.000 unrouted 0.000 | 85.5k tok/s
+step  3000 | train 1.205 | val 1.527 (ppl 4.61) | loadCV 0.00 prefCV 0.28 drop 0.000 unrouted 0.000 | 83.1k tok/s
+final eval ...
+{
+  "run": "expert_choice_s1",
+  "name": "expert_choice",
+  "router": "expert_choice",
+  "aux_coef": 0.0,
+  "capacity_factor": 1.0,
+  "top_k": 2,
+  "params_total": 2404736,
+  "params_active": 822656,
+  "final_val_loss": 1.526125500202179,
+  "final_val_ppl": 4.6003183158658745,
+  "teacher_forced_loss_causal_set": 1.4636247158050537,
+  "autoregressive_loss_causal_set": 1.508955578785546,
+  "teacher_forced_ppl_causal_set": 4.321595729175896,
+  "autoregressive_ppl_causal_set": 4.522005448695693,
+  "train_tok_per_s": 91205.0653015467,
+  "infer_tok_per_s": 263058.2498989095,
+  "max_abs_logit_change": 11.187166213989258,
+  "frac_positions_changed": 0.994140625
+}
+sample:
+
+Were is to the creation judgment's speed.
+
+Second Murderer:
+Not a thought I had not tell my weapon to sent
+Which the traitor of the country and state
+Prolethon-likefe's booling.
+
+PRINCE:
+What much may sacrring from whether; welcome.
+Be marrry, a thief, a word-stain art to call
+And so right as concer
+
+$ /Users/mshatakshi/Working/ml-from-scratch/04-diffusion/.venv/bin/python train.py --config configs/expert_choice_seq.json --set name=expert_choice_seq --set seed=0 --set out_root=runs
+[expert_choice_seq_s0] router=expert_choice device=mps params total=2.40M active/token=0.82M
+step   250 | train 2.607 | val 2.325 (ppl 10.23) | loadCV 0.00 prefCV 0.45 drop 0.000 unrouted 0.009 | 79.1k tok/s
+step   500 | train 2.060 | val 1.996 (ppl 7.36) | loadCV 0.00 prefCV 0.33 drop 0.000 unrouted 0.003 | 85.9k tok/s
+step   750 | train 1.746 | val 1.813 (ppl 6.13) | loadCV 0.00 prefCV 0.30 drop 0.000 unrouted 0.004 | 85.9k tok/s
+step  1000 | train 1.584 | val 1.731 (ppl 5.65) | loadCV 0.00 prefCV 0.29 drop 0.000 unrouted 0.006 | 84.7k tok/s
+step  1250 | train 1.490 | val 1.652 (ppl 5.22) | loadCV 0.00 prefCV 0.31 drop 0.000 unrouted 0.006 | 87.2k tok/s
+step  1500 | train 1.422 | val 1.603 (ppl 4.97) | loadCV 0.00 prefCV 0.31 drop 0.000 unrouted 0.007 | 85.2k tok/s
+step  1750 | train 1.365 | val 1.584 (ppl 4.88) | loadCV 0.00 prefCV 0.30 drop 0.000 unrouted 0.006 | 89.1k tok/s
+step  2000 | train 1.323 | val 1.560 (ppl 4.76) | loadCV 0.00 prefCV 0.29 drop 0.000 unrouted 0.005 | 90.1k tok/s
+step  2250 | train 1.278 | val 1.540 (ppl 4.66) | loadCV 0.00 prefCV 0.27 drop 0.000 unrouted 0.005 | 85.6k tok/s
+step  2500 | train 1.251 | val 1.523 (ppl 4.59) | loadCV 0.00 prefCV 0.22 drop 0.000 unrouted 0.004 | 86.9k tok/s
+step  2750 | train 1.226 | val 1.517 (ppl 4.56) | loadCV 0.00 prefCV 0.21 drop 0.000 unrouted 0.004 | 87.7k tok/s
+step  3000 | train 1.208 | val 1.514 (ppl 4.55) | loadCV 0.00 prefCV 0.21 drop 0.000 unrouted 0.004 | 91.0k tok/s
+final eval ...
+{
+  "run": "expert_choice_seq_s0",
+  "name": "expert_choice_seq",
+  "router": "expert_choice",
+  "aux_coef": 0.0,
+  "capacity_factor": 1.0,
+  "top_k": 2,
+  "params_total": 2404736,
+  "params_active": 822656,
+  "final_val_loss": 1.5195203030109405,
+  "final_val_ppl": 4.570032438454186,
+  "teacher_forced_loss_causal_set": 1.4363396167755127,
+  "autoregressive_loss_causal_set": 1.5253322349361724,
+  "teacher_forced_ppl_causal_set": 4.205274693661136,
+  "autoregressive_ppl_causal_set": 4.596670490171323,
+  "train_tok_per_s": 87203.3651244993,
+  "infer_tok_per_s": 267763.06139600626,
+  "max_abs_logit_change": 7.986141681671143,
+  "frac_positions_changed": 1.0
+}
+sample:
+
+Well; shall ye it so, he's not, and see them
+With gosssion'd eyes thoughtss and grooss wound
+To deny me nor the true that which the count
+three: the citizens of my forection's throne,
+If thou must she should be not where you blows to keep him.
+
+DUKE VINCENTIO:
+I would have a true templains afterwell
+
+$ /Users/mshatakshi/Working/ml-from-scratch/04-diffusion/.venv/bin/python train.py --config configs/expert_choice_seq.json --set name=expert_choice_seq --set seed=1 --set out_root=runs
+[expert_choice_seq_s1] router=expert_choice device=mps params total=2.40M active/token=0.82M
+step   250 | train 2.598 | val 2.265 (ppl 9.63) | loadCV 0.00 prefCV 0.47 drop 0.000 unrouted 0.015 | 91.0k tok/s
+step   500 | train 1.984 | val 1.929 (ppl 6.88) | loadCV 0.00 prefCV 0.56 drop 0.000 unrouted 0.011 | 93.5k tok/s
+step   750 | train 1.706 | val 1.824 (ppl 6.19) | loadCV 0.00 prefCV 0.44 drop 0.000 unrouted 0.008 | 91.9k tok/s
+step  1000 | train 1.572 | val 1.728 (ppl 5.63) | loadCV 0.00 prefCV 0.37 drop 0.000 unrouted 0.005 | 93.1k tok/s
+step  1250 | train 1.485 | val 1.662 (ppl 5.27) | loadCV 0.00 prefCV 0.31 drop 0.000 unrouted 0.003 | 94.1k tok/s
+step  1500 | train 1.421 | val 1.618 (ppl 5.04) | loadCV 0.00 prefCV 0.29 drop 0.000 unrouted 0.002 | 103.0k tok/s
+step  1750 | train 1.368 | val 1.580 (ppl 4.86) | loadCV 0.00 prefCV 0.29 drop 0.000 unrouted 0.002 | 93.6k tok/s
+step  2000 | train 1.311 | val 1.558 (ppl 4.75) | loadCV 0.00 prefCV 0.28 drop 0.000 unrouted 0.002 | 93.6k tok/s
+step  2250 | train 1.275 | val 1.544 (ppl 4.69) | loadCV 0.00 prefCV 0.27 drop 0.000 unrouted 0.001 | 102.8k tok/s
+step  2500 | train 1.245 | val 1.526 (ppl 4.60) | loadCV 0.00 prefCV 0.28 drop 0.000 unrouted 0.001 | 85.9k tok/s
+step  2750 | train 1.217 | val 1.522 (ppl 4.58) | loadCV 0.00 prefCV 0.27 drop 0.000 unrouted 0.001 | 83.1k tok/s
+step  3000 | train 1.196 | val 1.520 (ppl 4.57) | loadCV 0.00 prefCV 0.27 drop 0.000 unrouted 0.001 | 83.3k tok/s
+final eval ...
+{
+  "run": "expert_choice_seq_s1",
+  "name": "expert_choice_seq",
+  "router": "expert_choice",
+  "aux_coef": 0.0,
+  "capacity_factor": 1.0,
+  "top_k": 2,
+  "params_total": 2404736,
+  "params_active": 822656,
+  "final_val_loss": 1.5236296653747559,
+  "final_val_ppl": 4.588850997414964,
+  "teacher_forced_loss_causal_set": 1.4567615985870361,
+  "autoregressive_loss_causal_set": 1.5482437392530244,
+  "teacher_forced_ppl_causal_set": 4.2920376573945624,
+  "autoregressive_ppl_causal_set": 4.703202874347996,
+  "train_tok_per_s": 92519.32012236696,
+  "infer_tok_per_s": 267475.20887273474,
+  "max_abs_logit_change": 9.144293785095215,
+  "frac_positions_changed": 1.0
+}
+sample:
+
+What once, there thou hast not past steal the gods
+to my voices, the heart of it was excuse
+We than the new that the traitors of so fouge
+That you that make his manfe on the natture.
+
+ISABELLA:
+A  mankle of honourable as scarely
+At your should sat ambations here, and what came
+As he writes as come h
+
+$ /Users/mshatakshi/Working/ml-from-scratch/04-diffusion/.venv/bin/python train.py --config configs/topk_aux.json --set name=topk_aux_0.001 --set seed=0 --set out_root=runs --set aux_coef=0.001
+[topk_aux_0.001_s0] router=topk device=mps params total=2.40M active/token=0.82M
+step   250 | train 2.588 | val 2.300 (ppl 9.97) | loadCV 0.25 prefCV 0.35 drop 0.118 unrouted 0.024 | 74.5k tok/s
+step   500 | train 2.031 | val 1.971 (ppl 7.18) | loadCV 0.25 prefCV 0.36 drop 0.076 unrouted 0.005 | 79.2k tok/s
+step   750 | train 1.731 | val 1.817 (ppl 6.15) | loadCV 0.27 prefCV 0.36 drop 0.071 unrouted 0.008 | 79.3k tok/s
+step  1000 | train 1.587 | val 1.730 (ppl 5.64) | loadCV 0.26 prefCV 0.35 drop 0.065 unrouted 0.002 | 77.8k tok/s
+step  1250 | train 1.496 | val 1.676 (ppl 5.35) | loadCV 0.26 prefCV 0.35 drop 0.063 unrouted 0.000 | 82.8k tok/s
+step  1500 | train 1.429 | val 1.616 (ppl 5.03) | loadCV 0.26 prefCV 0.34 drop 0.059 unrouted 0.000 | 79.0k tok/s
+step  1750 | train 1.371 | val 1.588 (ppl 4.89) | loadCV 0.26 prefCV 0.34 drop 0.058 unrouted 0.000 | 82.9k tok/s
+step  2000 | train 1.330 | val 1.560 (ppl 4.76) | loadCV 0.26 prefCV 0.34 drop 0.056 unrouted 0.000 | 78.7k tok/s
+step  2250 | train 1.287 | val 1.550 (ppl 4.71) | loadCV 0.25 prefCV 0.33 drop 0.054 unrouted 0.000 | 83.9k tok/s
+step  2500 | train 1.259 | val 1.533 (ppl 4.63) | loadCV 0.25 prefCV 0.33 drop 0.052 unrouted 0.000 | 82.1k tok/s
+step  2750 | train 1.235 | val 1.528 (ppl 4.61) | loadCV 0.25 prefCV 0.32 drop 0.051 unrouted 0.000 | 83.4k tok/s
+step  3000 | train 1.214 | val 1.532 (ppl 4.63) | loadCV 0.25 prefCV 0.32 drop 0.050 unrouted 0.000 | 83.5k tok/s
+final eval ...
+{
+  "run": "topk_aux_0.001_s0",
+  "name": "topk_aux_0.001",
+  "router": "topk",
+  "aux_coef": 0.001,
+  "capacity_factor": 1.25,
+  "top_k": 2,
+  "params_total": 2404736,
+  "params_active": 822656,
+  "final_val_loss": 1.5381602513790131,
+  "final_val_ppl": 4.656016486691814,
+  "teacher_forced_loss_causal_set": 1.457780361175537,
+  "autoregressive_loss_causal_set": 1.4727538096393147,
+  "teacher_forced_ppl_causal_set": 4.296412452848949,
+  "autoregressive_ppl_causal_set": 4.36122861300783,
+  "train_tok_per_s": 81160.18973642158,
+  "infer_tok_per_s": 266955.3547250767,
+  "max_abs_logit_change": 11.867058753967285,
+  "frac_positions_changed": 0.94921875
+}
+sample:
+
+With oppart me in shame with this grief babe
+With ghelding them apt of on forther's fail.
+When thou wilt thou witht hardly fault.
+
+DUKE VINTIO:
+O hateful, my lord; for conspiratise it is
+the rest of lands the truth; he's shall come your shore.
+
+DUKE OF YORK:
+Play not what came these wantes is conten
+
+$ /Users/mshatakshi/Working/ml-from-scratch/04-diffusion/.venv/bin/python train.py --config configs/topk_aux.json --set name=topk_aux_0.1 --set seed=0 --set out_root=runs --set aux_coef=0.1
+[topk_aux_0.1_s0] router=topk device=mps params total=2.40M active/token=0.82M
+step   250 | train 2.584 | val 2.303 (ppl 10.00) | loadCV 0.02 prefCV 0.02 drop 0.015 unrouted 0.000 | 79.9k tok/s
+step   500 | train 2.064 | val 1.994 (ppl 7.35) | loadCV 0.01 prefCV 0.01 drop 0.001 unrouted 0.000 | 82.4k tok/s
+step   750 | train 1.753 | val 1.824 (ppl 6.20) | loadCV 0.02 prefCV 0.02 drop 0.000 unrouted 0.000 | 84.3k tok/s
+step  1000 | train 1.594 | val 1.731 (ppl 5.65) | loadCV 0.02 prefCV 0.02 drop 0.000 unrouted 0.000 | 78.0k tok/s
+step  1250 | train 1.500 | val 1.663 (ppl 5.27) | loadCV 0.01 prefCV 0.01 drop 0.000 unrouted 0.000 | 85.9k tok/s
+step  1500 | train 1.433 | val 1.606 (ppl 4.98) | loadCV 0.01 prefCV 0.01 drop 0.000 unrouted 0.000 | 80.7k tok/s
+step  1750 | train 1.375 | val 1.575 (ppl 4.83) | loadCV 0.01 prefCV 0.01 drop 0.000 unrouted 0.000 | 84.5k tok/s
+step  2000 | train 1.336 | val 1.554 (ppl 4.73) | loadCV 0.01 prefCV 0.01 drop 0.000 unrouted 0.000 | 82.8k tok/s
+step  2250 | train 1.295 | val 1.534 (ppl 4.64) | loadCV 0.01 prefCV 0.01 drop 0.000 unrouted 0.000 | 80.8k tok/s
+step  2500 | train 1.269 | val 1.515 (ppl 4.55) | loadCV 0.01 prefCV 0.01 drop 0.000 unrouted 0.000 | 80.8k tok/s
+step  2750 | train 1.246 | val 1.510 (ppl 4.53) | loadCV 0.01 prefCV 0.01 drop 0.000 unrouted 0.000 | 82.6k tok/s
+step  3000 | train 1.227 | val 1.512 (ppl 4.53) | loadCV 0.01 prefCV 0.01 drop 0.000 unrouted 0.000 | 80.6k tok/s
+final eval ...
+{
+  "run": "topk_aux_0.1_s0",
+  "name": "topk_aux_0.1",
+  "router": "topk",
+  "aux_coef": 0.1,
+  "capacity_factor": 1.25,
+  "top_k": 2,
+  "params_total": 2404736,
+  "params_active": 822656,
+  "final_val_loss": 1.519134191274643,
+  "final_val_ppl": 4.56826823590601,
+  "teacher_forced_loss_causal_set": 1.4375380277633667,
+  "autoregressive_loss_causal_set": 1.4825173468806128,
+  "teacher_forced_ppl_causal_set": 4.2103173620520495,
+  "autoregressive_ppl_causal_set": 4.404018179838393,
+  "train_tok_per_s": 82128.13333983716,
+  "infer_tok_per_s": 298132.84769169806,
+  "max_abs_logit_change": 13.921494483947754,
+  "frac_positions_changed": 0.90625
+}
+sample:
+
+Well once to kill the hours her heart
+My wife and good inviting and our native
+That think the Englishmen from whom your counsel the
+counted usurp her.
+
+LUCIO:
+Hark for consul, that interced wretch and lack
+On the presence condition. Be call'd the
+back'd of arms, being palace to cousin her:
+Either no
+| strategy | seeds | val ppl | AR ppl | AR − TF gap | load CV | pref CV | dropped | zero-expert tokens | leaks future? | train tok/s | infer tok/s |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| dense (FLOP-matched) | 2 | 4.693 (4.693–4.693) | 4.355 | +0.000 | 0.00 | 0.00 | 0.0% | 0.0% | 0% of positions | 254,276 | 1,526,767 |
+| top-2 softmax | 2 | 4.638 (4.612–4.663) | 4.295 | -0.000 | 0.77 | 0.77 | 0.0% | 0.0% | 0% of positions | 86,934 | 203,917 |
+| top-2 softmax, cap 1.25 | 2 | 4.672 (4.663–4.681) | 4.574 | +0.165 | 0.60 | 0.81 | 23.1% | 5.4% | 96% of positions | 109,998 | 291,490 |
+| top-2 + aux, cap 1.25 | 2 | 4.587 (4.565–4.609) | 4.548 | +0.293 | 0.07 | 0.07 | 0.0% | 0.0% | 96% of positions | 81,506 | 247,287 |
+| top-2 + aux, no cap | 2 | 4.618 (4.615–4.621) | 4.375 | +0.000 | 0.06 | 0.06 | 0.0% | 0.0% | 0% of positions | 77,743 | 222,560 |
+| expert-choice (batch) | 2 | 4.571 (4.542–4.600) | 4.488 | +0.191 | 0.00 | 0.29 | 0.0% | 0.1% | 100% of positions | 85,201 | 264,842 |
+| expert-choice (per-seq) | 2 | 4.579 (4.570–4.589) | 4.650 | +0.401 | 0.00 | 0.24 | 0.0% | 0.2% | 100% of positions | 89,861 | 267,619 |
+| top-2 + aux 0.001, cap 1.25 | 1 | 4.656 (4.656–4.656) | 4.361 | +0.065 | 0.25 | 0.32 | 5.0% | 0.0% | 95% of positions | 81,160 | 266,955 |
+| top-2 + aux 0.1, cap 1.25 | 1 | 4.568 (4.568–4.568) | 4.404 | +0.194 | 0.01 | 0.01 | 0.0% | 0.0% | 91% of positions | 82,128 | 298,133 |
+
+figures -> figures/
