@@ -1,0 +1,36 @@
+{
+  "data_path": "input.txt",
+  "out_root": "runs",
+  "device": "auto",
+  "seed": 0,
+
+  "n_layer": 4,
+  "n_head": 4,
+  "d_model": 128,
+  "block_size": 128,
+  "dropout": 0.0,
+
+  "router": "topk",
+  "n_experts": 8,
+  "top_k": 2,
+  "expert_hidden": 256,
+  "dense_hidden": 512,
+  "moe_every": 1,
+  "capacity_factor": null,
+  "normalize_gates": true,
+  "ec_group": "batch",
+  "aux_coef": 0.0,
+  "z_coef": 0.0,
+
+  "steps": 3000,
+  "batch_size": 32,
+  "lr": 2e-3,
+  "warmup": 100,
+  "weight_decay": 0.1,
+  "grad_clip": 1.0,
+
+  "eval_every": 250,
+  "eval_batches": 20,
+  "final_eval_batches": 100,
+  "causal_eval_seqs": 8
+}
