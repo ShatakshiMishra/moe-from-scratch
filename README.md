@@ -1,4 +1,4 @@
-# 05-moe — Sparse Mixture-of-Experts, from scratch
+# Sparse Mixture-of-Experts, from scratch
 
 A sparse MoE feed-forward layer written in plain PyTorch, with no MoE libraries. It's dropped into a small
 decoder-only GPT and trained on character-level TinyShakespeare. Three routing strategies are compared:
