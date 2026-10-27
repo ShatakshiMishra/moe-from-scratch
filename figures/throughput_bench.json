@@ -1,0 +1,30 @@
+{
+  "dense": {
+    "train_tok_per_s": 169300.68035187246,
+    "infer_tok_per_s": 991023.6868125221
+  },
+  "topk_softmax": {
+    "train_tok_per_s": 62621.682866004114,
+    "infer_tok_per_s": 193144.30516440558
+  },
+  "topk_softmax_cap": {
+    "train_tok_per_s": 84253.3978536128,
+    "infer_tok_per_s": 236345.92762602813
+  },
+  "topk_aux": {
+    "train_tok_per_s": 88609.6521459431,
+    "infer_tok_per_s": 240173.035290212
+  },
+  "topk_aux_nocap": {
+    "train_tok_per_s": 82291.14673207706,
+    "infer_tok_per_s": 215703.73424909465
+  },
+  "expert_choice": {
+    "train_tok_per_s": 97746.39598794669,
+    "infer_tok_per_s": 252078.6674011858
+  },
+  "expert_choice_seq": {
+    "train_tok_per_s": 96117.90392770078,
+    "infer_tok_per_s": 259277.4287492321
+  }
+}
